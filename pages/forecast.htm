@@ -1,1 +1,19 @@
-Forecast for {{ city }}
+<h1>This Is Forecast For {{city}}</h1>
+<div ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                {{
+                    w.dt
+                }}
+                </h3>
+                </div>
+                <div class="panel-body">
+                    Daytime Temperature : {{covertToFahrenheit(w.temp.day)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
