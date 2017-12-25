@@ -44,7 +44,7 @@ function($scope, $resource, $routeParams, $log, cityService) {
     $scope.name = 'Forecast';
     $scope.city = cityService.city;
 
-    $scope.days = $routeParams.days || 2;
+    $scope.days = $routeParams.days || '2';
 
     $scope.weatherAPI = $resource("https://api.openweathermap.org/data/2.5/forecast/daily", { callback: "JSON_CALLBACK" }, { get: { method: "JSONP" } });
 
